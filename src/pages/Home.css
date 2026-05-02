@@ -1,7 +1,7 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 5rem;
   padding: 2rem 0;
 }
 
@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .hero-title {
@@ -34,8 +34,8 @@
 }
 
 .section-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -80,10 +80,130 @@
   font-size: 0.95rem;
 }
 
+/* New Info Section Styles */
+.info-section {
+  padding: 3rem;
+  border: 1px solid var(--glass-border);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.info-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-content p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.info-list li::before {
+  content: '✓';
+  color: var(--green-main);
+  font-weight: bold;
+}
+
+.info-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  background: var(--bg-tertiary);
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: var(--saffron-main);
+  margin-bottom: 0.25rem;
+}
+
+.stat-card p {
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+}
+
+/* Facts Section */
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.fact-item {
+  padding: 2rem;
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-normal);
+}
+
+.fact-item:hover {
+  border-color: var(--green-glow);
+}
+
+.fact-item h4 {
+  color: var(--saffron-light);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.fact-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .info-stats {
+    flex-direction: row;
+  }
+  .stat-card {
+    flex: 1;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-actions {
     flex-direction: column;
     width: 100%;
     max-width: 300px;
+  }
+  .info-stats {
+    flex-direction: column;
+  }
+  .info-section {
+    padding: 1.5rem;
   }
 }

@@ -68,6 +68,49 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <section className="info-section glass-panel stagger-4">
+        <div className="info-grid">
+          <div className="info-content">
+            <h2 className="gradient-text">Why Your Vote Matters</h2>
+            <p>Every vote is a voice in the world's largest democracy. By voting, you participate in the decision-making process that shapes the future of our nation, its policies, and its leadership.</p>
+            <ul className="info-list">
+              <li>Choose representatives who align with your values.</li>
+              <li>Hold the government accountable.</li>
+              <li>Shape the legislative agenda for the next 5 years.</li>
+              <li>Exercise your constitutional right and duty.</li>
+            </ul>
+          </div>
+          <div className="info-stats">
+            <div className="stat-card">
+              <h3>900M+</h3>
+              <p>Registered Voters</p>
+            </div>
+            <div className="stat-card">
+              <h3>1M+</h3>
+              <p>Polling Stations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="facts-section stagger-4">
+        <h2 className="section-title">Election Quick Facts</h2>
+        <div className="facts-grid">
+          <div className="fact-item glass-panel">
+            <h4>First Election</h4>
+            <p>India's first general election was held in 1951-52 after independence.</p>
+          </div>
+          <div className="fact-item glass-panel">
+            <h4>ECI Authority</h4>
+            <p>The Election Commission is a permanent Constitutional Body established in 1950.</p>
+          </div>
+          <div className="fact-item glass-panel">
+            <h4>Universal Suffrage</h4>
+            <p>Every Indian citizen above 18 has the right to vote regardless of caste, religion, or gender.</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
