@@ -1,0 +1,152 @@
+.timeline-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.timeline-marker {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  color: white;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: calc(100% + 2rem);
+  background: var(--glass-border);
+  z-index: 1;
+}
+
+.timeline-content {
+  flex-grow: 1;
+  padding: 1.5rem;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--glass-border);
+}
+
+.timeline-item:hover .timeline-content {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-step-title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.expand-btn {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.timeline-item:hover .expand-btn {
+  color: var(--text-primary);
+}
+
+.timeline-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.timeline-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  margin-top: 0;
+}
+
+.timeline-item.expanded .timeline-details {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.timeline-details h4 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.timeline-details ul {
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-details li {
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    gap: 1rem;
+  }
+  .timeline-marker {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .marker-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .timeline-content {
+    padding: 1rem;
+  }
+}
